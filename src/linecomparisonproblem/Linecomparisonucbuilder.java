@@ -1,5 +1,7 @@
 package linecomparisonproblem;
+
 import java.util.Scanner;
+
 public class Linecomparisonucbuilder {
     // Calculate length and return
     public int lengthCalculate(int x1, int y1, int x2, int y2) {
@@ -18,15 +20,15 @@ public class Linecomparisonucbuilder {
         System.out.println("Enter second coordinates x2 and y2: ");
         x2 = input.nextInt();
         y2 = input.nextInt();
-        // for second line
+        // For second line
         System.out.println("Enter coordinates of second line");
         System.out.println("Enter first coordinates x3 and y3: ");
         x3 = input.nextInt();
         y3 = input.nextInt();
-        System.out.println("Enter second coordinates x4 and y4:");
+        System.out.println("Enter second coordinates x4 and y4: ");
         x4 = input.nextInt();
         y4 = input.nextInt();
-        //invoking method
+        // Invoking Method
         Integer line1 = length.lengthCalculate(x1, y1, x2, y2);
         Integer line2 = length.lengthCalculate(x3, y3, x4, y4);
         // Checking equality of lines
@@ -35,6 +37,14 @@ public class Linecomparisonucbuilder {
         } else {
             System.out.println("Both lines are not equal");
         }
-
+        // comparing two line which one is smaller, equal or greater.
+        int result = line1.compareTo(line2);
+        if (result > 0) {
+            System.out.println("Line 1 is greater");
+        } else if (result < 0) {
+            System.out.println("Line 2 is greater");
+        } else {
+            System.out.println("Both the lines are equal");
+        }
     }
 }
